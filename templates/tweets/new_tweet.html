@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Tweet</title>
+</head>
+<body>
+    <h1> New Tweet </h1>
+    <form action=" {% url 'post_tweet' %} " method="post">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="Post Tweet">
+    </form>
+</body>
+</html>

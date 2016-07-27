@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User | {{ username }}</title>
+</head>
+<body>
+    <h1>{{ username }} | Profile</h1><hr/>
+
+    <a href="{% url 'user_following' username %}"><h3>Following: {{ following }}</h3></a>
+    <a href="{% url 'user_followers' username %}"><h3>Followers: {{ followers }}</h3></a>
+    {% for tweet in user_tweets %}
+        <div>
+            <b> {{ tweet.content }} </b>
+            <i> {{ tweet.timestamp }}</i>
+        </div>
+    {% endfor %}
+</body>
+</html>

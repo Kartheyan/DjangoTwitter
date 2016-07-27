@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | {{ username }}</title>
+</head>
+<body>
+    {% for tweet in timeline %}
+        <div>
+            <u> {{ tweet.tweeter }} </u>
+            <b> {{ tweet.content }} </b>
+            <i> {{ tweet.timestamp }}</i>
+        </div>
+    {% endfor %}
+</body>
+</html>

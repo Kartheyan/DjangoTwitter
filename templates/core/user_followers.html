@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User | {{ username }}</title>
+</head>
+<body>
+    <h1>{{ username }} | Followers</h1><hr/>
+
+    {% for user in followers %}
+        <h3>{{ user.username }}</h3>
+    {% endfor %}
+</body>
+</html>
